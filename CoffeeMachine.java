@@ -111,6 +111,9 @@ public class CoffeeMachine {
                 pot.take();
 
             }
+            if (action.equals("q")) {
+                break;
+            }
         }
     }
 
