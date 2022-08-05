@@ -45,6 +45,7 @@ public class machine {
             coffeeBeans -= 16;
             cups -= 1;
             till += 4;
+            System.out.println();
         }
     }
 
@@ -55,28 +56,37 @@ public class machine {
             milk -= 75;
             cups -= 1;
             till += 7;
+            System.out.println();
         }
 
     }
 
     public void buyCappuccino() {
-        if (this.water >= 200 && this.coffeeBeans >= 12 && this.milk >= 12 && this.cups >= 1) {
+        if (this.water >= 200 && this.coffeeBeans >= 12 && this.milk >= 100 && this.cups >= 1) {
             water -= 200;
             coffeeBeans -= 12;
-            milk -= 12;
+            milk -= 100;
             cups -= 1;
             till += 6;
+            System.out.println();
         }
     }
 
     public void fill() {
         System.out.println("Write how many ml of water you want to add:");
+        System.out.print("> ");
         int waterAdded = scanner.nextInt();
+
         System.out.println("Write how many ml of milk you want to add:");
+        System.out.print("> ");
         int milkAdded = scanner.nextInt();
+
         System.out.println("Write how many grams of coffee beans you want to add:");
+        System.out.print("> ");
         int coffeeAdded = scanner.nextInt();
+
         System.out.println("Write how many disposable cups of coffee you want to add:");
+        System.out.print("> ");
         int cupsAdded = scanner.nextInt();
 
         water += waterAdded;

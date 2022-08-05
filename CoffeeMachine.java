@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CoffeeMachine {
     public static void main(String[] args) {
-
+/*
         int cups = 0;
         int water = 200;
         int coffee = 15;
@@ -14,8 +14,8 @@ public class CoffeeMachine {
         int coffeeSupply;
         int milkSupply;
         int requestedCups;
+*/
 
-        Scanner scanner = new Scanner(System.in);
 /*
         System.out.println("Starting to make a coffee");
         System.out.println("Grinding coffee beans");
@@ -75,37 +75,41 @@ public class CoffeeMachine {
             System.out.println("No, I can only make " + smallest + " cup(s) of coffee ");
         }*/
 
+        Scanner scanner = new Scanner(System.in);
         machine pot = new machine();
-        //String action;
+
 
         while (true) {
             pot.state();
-            System.out.println("Write action (buy, fill, take ):");
+            System.out.println();
+            System.out.println("Write action (buy, fill, take):");
             //System.out.print("> ");
             String action = scanner.next();
+            //System.out.println();
             if (action.equals("buy")) {
                 System.out.println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino");
+                System.out.print("> ");
                 int choice = scanner.nextInt();
                 if (choice == 1 ) {
                     pot.buyEspresso();
-                    continue;
+
                 }
                 if (choice == 2 ) {
                     pot.buyLatte();
-                    continue;
+
                 }
                 if (choice == 3 ) {
                     pot.buyCappuccino();
-                    continue;
+
                 }
             }
-            else if (action.equals("fill")) {
+            if (action.equals("fill")) {
                 pot.fill();
-                continue;
+
             }
-            else if (action.equals("take")) {
+            if (action.equals("take")) {
                 pot.take();
-                continue;
+
             }
         }
     }
